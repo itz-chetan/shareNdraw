@@ -1,0 +1,194 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.option-cont {
+    height: 3.5rem;
+    width: 4rem;
+    background-color: #dcdde1;
+    position: absolute;
+    border-radius: 50%;
+    top: 2rem;
+    left: 2rem;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        position: fixed;
+}
+.tool-cont {
+    background-color: lightgrey;
+    width: 44%;
+    position: absolute;
+    top: 35.7rem;
+    left: 28%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    border: 2px solid grey;
+}
+/* .scale-tool{
+    animation-name: x;
+    animation-duration: 1s;
+}
+
+@keyframes x {
+    0%{
+        transform: scale(0.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+    
+} */
+
+.tool-cont > * {
+    /* display: block; */
+    width: 2rem;
+}
+.pencil-tool-cont {
+    
+    height: 3.2rem;
+    width: 5rem;
+    /* background-color: lightgreen; */
+    position: absolute;
+    top: 32.5rem;
+    left: 28%;
+    background-color: #dcdde1;
+    box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px, rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px, rgb(0 0 0 / 9%) 0px -3px 5px;
+    display: none;
+}
+.pencil-width-cont {
+    /* background-color: orange; */
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pencil-width-cont input {
+    width: 80%;
+}
+
+.pencil-color-cont {
+    /* background-color: aqua; */
+    height: calc(100% - 2rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pencil-color {
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+}
+
+.black {
+    background-color: black;
+}
+.red {
+    background-color: red;
+}
+.blue {
+    background-color: blue;
+}
+
+.eraser-tool-cont {
+    height: 2rem;
+    width: 7%;
+    background-color: #dcdde1;
+    position: absolute;
+    top: 33.7rem;
+    left: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px, rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px, rgb(0 0 0 / 9%) 0px -3px 5px;
+    display: none;
+}
+
+.eraser-tool-cont input {
+    width: 80%;
+}
+
+.sticky-cont {
+    height: 35%;
+    width: 12rem;
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    /* background-color: aqua; */
+}
+.header-cont {
+    height: 2rem;
+    /* background-color: orange; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #5ebfff;
+    cursor: pointer;
+}
+.header-cont > * {
+    height: 1.3rem;
+    width: 1.3rem;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+}
+.minimize {
+    background-color: #4cd137;
+}
+.remove {
+    background-color: red;
+}
+
+.note-cont {
+    height: calc(100% - 2rem);
+    display: flex;
+    align-items: ju;
+    /* background-color: crimson; */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+textarea{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    background-color: #9cc0d9;
+}
+img{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+}
+.notes{
+    width: 37%;
+    height: 67%;
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 151%;
+    font-family: 'Corinthia', cursive;
+    margin:5% 20% 13% 0%;
+    
+}
+canvas{
+    width: 100vw;;
+    height: 100vh;
+}

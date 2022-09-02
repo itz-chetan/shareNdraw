@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+            integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet" href="./style1.css">
+        <title>shareNdraw</title>
+    </head>
+    <body>
+
+        <div class="chatBot">
+            <img src="/chat_img.png" alt="">
+        </div>
+        <section class="chat__section">
+            <div class="brand">
+                <img height="40px" src="/wassup.png.png" alt="" class="chat">
+                <img src="/close.png" alt="" class="close_section">
+                <h1>Wassup</h1>
+            </div>
+            <div class="message_area">
+                <!-- <div class="message incoming">
+                    <h4>Rakesh</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, amet!</p>
+                </div>
+                <div class="message outgoing">
+                    <h4>Chetan</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, amet!</p>
+                </div> -->
+            </div>
+            <div>
+                <textarea  id="textarea" cols="30" rows="1" placeholder="write a message"></textarea>
+            </div>
+        </section>
+
+
+
+        <!-- <h1 class="animate__animated animate__bounce">An animated element</h1> -->
+        <div class="option-cont">
+            <i class="fas fa-bars"></i>
+        </div>
+        <!-- scale-tool animate__animated animate__fadeInDown -->
+        <!-- animate__slideInUp -->
+        <div class="tool-cont animate__animated animate__slideInUp">
+            <img class="pencil" src="./icons/pencil.svg" />
+            <img class="eraser" src="./icons/eraser.svg" />
+            <img class="sticky" src="./icons/notes.svg" />
+            <img class="download" src="./icons/downloaad.svg" />
+            <img class="upload" src="./icons/upload.svg" />
+            <img class="undo" src="./icons/undo.svg" />
+            <img class="redo" src="./icons/redo.svg" />
+        </div>
+
+        <div class="pencil-tool-cont">
+            <div class="pencil-width-cont">
+                <input
+                    type="range"
+                    min="2"
+                    max="10"
+                    value="3"
+                    class="pencil-width"
+                />
+            </div>
+            <div class="pencil-color-cont">
+                <div class="black pencil-color"></div>
+                <div class="red pencil-color"></div>
+                <div class="blue pencil-color"></div>
+            </div>
+        </div>
+        <div class="eraser-tool-cont">
+            <input
+                type="range"
+                min="2"
+                max="10"
+                value="3"
+                class="eraser-width"
+            />
+        </div>
+
+        <!-- <div class="sticky-cont">
+             <div class="header-cont">
+                 <div class="minimize"></div>
+                 <div class="remove"></div>
+             </div>
+             <div class="note-cont">
+                 <textarea spellcheck="false"></textarea>
+             </div>
+        </div> -->
+        <canvas></canvas>
+        <script
+            src="https://cdn.socket.io/4.2.0/socket.io.min.js"
+            integrity="sha384-PiBR5S00EtOj2Lto9Uu81cmoyZqR57XcOna1oAuVuIEjzj0wpqDVfD0JA9eXlRsj"
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            let socket = io.connect("http://localhost:3000/");
+        </script>
+        <script src="./tool.js"></script>
+        <script src="./canvas.js"></script>
+        <script src="./client.js"></script>
+    </body>
+</html>
